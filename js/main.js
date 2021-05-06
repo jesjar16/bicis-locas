@@ -49,4 +49,14 @@ function validateForm(){
 		$('.form-group select').after("<span class='error-message'>Debe seleccionar su tipo de bici</span>");
 	}
 		
+	// Validación sólo letras de la A-Z para nombre y apellido
+	const onlyLetters = /^[A-Za-z]+$/;
+
+	if (!name.match(onlyLetters))
+		$('#name').after("<span class='error-message'>Su nombre sólo puede contener letras</span>");
+
+	if (!lastname.match(onlyLetters))
+		$('#lastname').after("<span class='error-message'>Su nombre sólo puede contener letras</span>");
+	
+
 }
