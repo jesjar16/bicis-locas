@@ -20,8 +20,8 @@
 
         $('form').submit(function() {   
 
-          if ($('name').empty())
-              $('#name').after('Debe ingresar su nombre');
+          if (!$('#name').val())
+              $('#name').after('<span>Debe ingresar su nombre</span>');
         });
        });
     </script>
